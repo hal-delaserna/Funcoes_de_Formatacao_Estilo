@@ -42,6 +42,4 @@ FUNA_ordenacao <-
     as.data.frame(tabela)[order(as.data.frame(tabela)[, coluna], decreasing = TRUE),]
   }
 
-FUNA_BARPLOT <- function(x) {
-  barplot(height = as.matrix(x))
-}
+

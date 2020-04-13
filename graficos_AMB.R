@@ -1,4 +1,4 @@
-
+library(imputeTS)
 
 # boxplot series preço-ano ----
 boxQuadro <-
@@ -18,6 +18,7 @@ boxQuadro <-
 
 # BarPlot ROM-ano ----
 
-FUNA_BARPLOT <- function(x) {
-  barplot(height = as.matrix(x))
-}
+FUNA_BARPLOT <-
+  function(x) {
+    barplot(height = as.matrix(na_replace(x, fill = 0)))
+  }

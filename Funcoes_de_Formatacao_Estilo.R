@@ -5,7 +5,7 @@ FUNA_caractereParaNumero <-
   }
 FUNA_removeAcentos <-
   function(x) {
-    gsub(pattern = "á", replacement = "a", x) %>% gsub(pattern = "â", replacement = "a") %>% gsub(pattern = "à", replacement = "a") %>% 	gsub(pattern = "ã", replacement = "a") %>% 	gsub(pattern = "é", replacement = "e") %>% 	gsub(pattern = "ê", replacement = "e") %>% 	gsub(pattern = "í", replacement = "i") %>% 	gsub(pattern = "ó", replacement = "o") %>% 	gsub(pattern = "ô", replacement = "o") %>% 	gsub(pattern = "õ", replacement = "o") %>% 	gsub(pattern = "ú", replacement = "u") %>% 	gsub(pattern = "ç", replacement = "c") %>% 	gsub(pattern = "Á", replacement = "A") %>% 	gsub(pattern = "Â", replacement = "A") %>% 	gsub(pattern = "À", replacement = "A") %>% 	gsub(pattern = "Ã", replacement = "A") %>% 	gsub(pattern = "É", replacement = "E") %>% 	gsub(pattern = "Ê", replacement = "E") %>% 	gsub(pattern = "Í", replacement = "I") %>% 	gsub(pattern = "Ó", replacement = "O") %>% 	gsub(pattern = "Ô", replacement = "O") %>% 	gsub(pattern = "Õ", replacement = "O") %>% gsub(pattern = "Ú", replacement = "U") %>% gsub(pattern = "Ü", replacement = "U") %>% gsub(pattern = "Ç", replacement = "C") %>% gsub(pattern = "'", replacement = "") %>% gsub(pattern = "-", replacement = " ")
+    gsub(pattern = "Ã¡", replacement = "a", x) %>% gsub(pattern = "Ã¢", replacement = "a") %>% gsub(pattern = "Ã ", replacement = "a") %>% 	gsub(pattern = "Ã£", replacement = "a") %>% 	gsub(pattern = "Ã©", replacement = "e") %>% 	gsub(pattern = "Ãª", replacement = "e") %>% 	gsub(pattern = "Ã­", replacement = "i") %>% 	gsub(pattern = "Ã³", replacement = "o") %>% 	gsub(pattern = "Ã´", replacement = "o") %>% 	gsub(pattern = "Ãµ", replacement = "o") %>% 	gsub(pattern = "Ãº", replacement = "u") %>% 	gsub(pattern = "Ã§", replacement = "c") %>% 	gsub(pattern = "Ã", replacement = "A") %>% 	gsub(pattern = "Ã‚", replacement = "A") %>% 	gsub(pattern = "Ã€", replacement = "A") %>% 	gsub(pattern = "Ãƒ", replacement = "A") %>% 	gsub(pattern = "Ã‰", replacement = "E") %>% 	gsub(pattern = "ÃŠ", replacement = "E") %>% 	gsub(pattern = "Ã", replacement = "I") %>% 	gsub(pattern = "Ã“", replacement = "O") %>% 	gsub(pattern = "Ã”", replacement = "O") %>% 	gsub(pattern = "Ã•", replacement = "O") %>% gsub(pattern = "Ãš", replacement = "U") %>% gsub(pattern = "Ãœ", replacement = "U") %>% gsub(pattern = "Ã‡", replacement = "C") %>% gsub(pattern = "'", replacement = "") %>% gsub(pattern = "-", replacement = " ")
   }
 FUNA_maiusculas <-
   function(x) {
@@ -43,3 +43,6 @@ FUNA_ordenacao <-
   }
 
 
+FUNA_clipboard <- function(x, sep) {
+  write.table(x = x, file = 'clipboard', sep = sep, dec = ",", row.names = FALSE)
+}
